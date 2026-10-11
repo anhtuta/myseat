@@ -1,0 +1,140 @@
+---
+description: "Use when implementing, changing, or refactoring any feature. Ensure feature documentation in docs is created or updated, with one markdown file per feature."
+alwaysApply: false
+---
+
+# Keep Feature Docs In Sync
+
+- Update the docs whenever feature behavior, API, data flow, config, UX, or operational behavior changes. No need to always do it, unless you are asked to do so, or you knew the docs file in current context of the conversation.
+- Store feature documentation as markdown files under `docs/`.
+- If the feature already has a docs file, update it, otherwise, create a new markdown file in `docs/` for that feature.
+- Filename should start with a number and a underscore, e.g, `01_AUTH_LOGIN_FLOW.md`.
+
+# Types of documentation
+
+1. Brand-new feature docs: This is a new feature that is being added to the system.
+2. Optimization docs: This is an optimization to an existing feature.
+
+# Format of the documentation
+
+Note: `optional` means that the section is not mandatory, and can be skipped if not applicable.
+
+## 1. Brand-new feature docs
+
+Use following format:
+
+```md
+## Intro
+
+(Describe the new feature in a few sentences.)
+
+## Functional Requirements
+
+## Non-Functional Requirements
+
+## Use cases
+
+## Possible Solutions
+
+(Introduce the possible solutions for some use cases that are difficult/complex/important, no need for all use cases.)
+
+### 1. How to implement [difficult/complex/important part here]?
+
+#### 1.1. Solution A
+
+- How it works
+- Pros
+- Cons
+- Recommendation for our problem: Yes/No (optional)
+- (If above is NO, then) When I’d use it (optional)
+
+#### 1.2. Solution B
+
+...
+
+## High level Architecture/Design
+
+### Component Diagram / Flowchart / Sequence Diagram
+
+(Draw a component diagram, flowchart, or sequence diagram, to show how they interact with each other.)
+
+### Core entities/models
+
+List core entities/models and their relationships.
+
+### API Draft
+
+Usually should align with the use cases. Each use case should have a corresponding API draft. An use case may have multiple API drafts, or no API at all.
+
+## Implementation details
+
+List of implementation summary with phase numbers, such as: "Phase 1 - Service Scaffold"
+
+In planning phase: draft all phases that are planned to be implemented, keep it concise, no details.
+
+After implementing a phase:
+- Update docs in this section, and title of each phase, such as "Phase 1 - Service Scaffold" -> "Phase 1 - Service Scaffold **Done**".
+- Include the following sections:
+  - What changed (mandatory, keep it concise and to the point)
+  - Why it changed (optional, keep it concise and to the point)
+  - Rollout, migration, or backward-compatibility notes (if applicable)
+
+## Future Higher-Scale Path
+
+## (Other sections you can add if needed)
+```
+
+## 2. Optimization docs
+
+Use following format:
+
+```md
+## Current Problem
+
+(Describe the current behavior or problem that we need to optimize/solve.)
+
+## Examples (status quo — before the fix)
+
+(List some examples of the issue before the fix.)
+
+## Possible Solutions
+
+### 1. Solution A
+
+- How it works
+- Pros
+- Cons
+- Recommendation for our problem: Yes/No (optional)
+- (If above is NO, then) When I’d use it (optional)
+
+### 2. Solution B
+
+## High level Architecture/Design (optional)
+
+### Component Diagram / Flowchart / Sequence Diagram
+
+(Draw a component diagram, flowchart, or sequence diagram, to show how they interact with each other.)
+
+## Implementation details
+
+List of implementation summary with phase numbers, such as: "Phase 1 - Service Scaffold"
+
+In planning phase: draft all phases that are planned to be implemented, keep it concise, no details.
+
+After implementing a phase:
+- Update docs in this section, and title of each phase, such as "Phase 1 - Service Scaffold" -> "Phase 1 - Service Scaffold **Done**".
+- Include the following sections:
+  - What changed (mandatory, keep it concise and to the point)
+  - Why it changed (optional, keep it concise and to the point)
+  - Rollout, migration, or backward-compatibility notes (if applicable)
+
+## Examples (after the fix)
+
+(List some examples of the issue after the fix.)
+
+## Lesson (look back here)
+
+## Future Higher-Scale Path
+
+## (Other sections you can add if needed)
+```

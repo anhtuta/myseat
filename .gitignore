@@ -1,0 +1,12 @@
+### PlantUML ###
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+target/
+.specstory
+docker/logs/
+
+.idea/
