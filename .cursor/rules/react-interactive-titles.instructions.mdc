@@ -1,6 +1,6 @@
 ---
 description: Require title (or accessible name) on buttons, icon buttons, and icon-only controls so hover reveals their purpose
-globs: chat-app-frontend/**/*.js, chat-app-frontend/**/*.tsx
+globs: frontend/**/*.js, frontend/**/*.tsx
 alwaysApply: false
 ---
 

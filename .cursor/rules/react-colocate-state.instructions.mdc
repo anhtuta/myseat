@@ -1,6 +1,6 @@
 ---
 description: Colocate React state in the lowest owning component to avoid unnecessary parent and sibling re-renders
-globs: chat-app-frontend/**/*.js, chat-app-frontend/**/*.tsx
+globs: frontend/**/*.js, frontend/**/*.tsx
 alwaysApply: false
 ---
 
