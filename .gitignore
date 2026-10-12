@@ -10,3 +10,27 @@ target/
 docker/logs/
 
 .idea/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+coverage.html
+vendor/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+package-lock.json
+yarn.lock
+
+# Local env
+.env
+.env.*
+!.env.example
