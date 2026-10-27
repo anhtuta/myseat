@@ -1,3 +1,9 @@
 {
-    "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "gopls": {
+    "build.expandWorkspaceToModule": true
+  },
+  "cSpell.words": [
+    "myseat"
+  ]
 }
